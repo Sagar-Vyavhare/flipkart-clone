@@ -97,6 +97,7 @@ nav .login:hover {
   justify-content: center;
   border: 1px solid rgb(255, 255, 255);
   transition:var(--transition-2s);
+  position: relative;
 }
 .dots .cart,
 nav .store{
@@ -114,6 +115,7 @@ nav .store:hover{
   border-radius: 0.5rem;
   background: var(--bg-color-dots);
 }
+
 .dots .dropdown {
   appearance: none;
   cursor: pointer;
@@ -144,3 +146,56 @@ nav .store:hover{
   position: absolute;
   top: 7px;
 }
+
+.drop-item{
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 2rem;
+    padding: .2rem;
+    margin: 0;
+    background-color:var(--pure-white);
+    width: 15rem;
+    box-shadow: 0px 3px 10px 2px  rgba(0, 0, 0, 0.267);
+    border-radius:0 0 .5rem .5rem;
+    border: 1px solid rgba(167, 161, 161, 0.592);
+    transition: display 5s;
+}
+.dots:hover .drop-item{
+    display: block;
+}
+.drop-item li{
+    list-style-type: none;
+    /* height: 5rem; */
+    padding: .5rem;
+    margin: .2rem 0;
+    position: relative;
+    transform:  scale(0.9);
+}
+.drop-item li:first-child{
+    margin-top: 0;
+}
+.drop-item li:last-child{
+    margin-bottom: 0;
+}
+
+.drop-item li:hover{
+    background-color: #fafafa;
+    transform:  scale(1);
+
+}
+
+.drop-item li a{
+    text-decoration: none;
+    color: var(--text-secondry);
+    display: flex;
+    font-size: .5rem;
+
+}
+.drop-item li .bx{
+    font-size: 1.5rem;
+    margin-right: .6rem;
+}
+
+
+
