@@ -6,8 +6,8 @@
   --white: #f7f7f7;
   --serchbar-color: #f0f5ff;
   --text-primary: #121212;
-  --text-secondry: #77787a;
-  --bg-primary: #2a55e5;
+  --text-secondry: #565050;
+  --bg-primary: #1b49dd;
   --transition-2s:all .2s;
 }
 
@@ -77,8 +77,11 @@ nav .login {
   justify-content: space-around;
   cursor: pointer;
   transition: var(--transition-2s);
+  position: relative;
 }
-
+nav .login:hover .drop-item{
+    display: block;
+}
 nav .login span {
   font-weight: 500;
 }
@@ -86,6 +89,9 @@ nav .login span {
 nav .login:hover {
   background-color: var(--bg-primary);
   color: var(--white);
+}
+nav .login:hover .bx-chevron-down{
+    rotate: 180deg;
 }
 
 .dots {
@@ -106,7 +112,7 @@ nav .store{
 }
 nav .cart:hover,
 nav .store:hover{
-    scale:1.5;
+    transform: scale(1.2);
 }
 
 .dots:hover {
@@ -155,7 +161,7 @@ nav .store:hover{
     padding: .2rem;
     margin: 0;
     background-color:var(--pure-white);
-    width: 15rem;
+    /* width: 15rem; */
     box-shadow: 0px 3px 10px 2px  rgba(0, 0, 0, 0.267);
     border-radius:0 0 .5rem .5rem;
     border: 1px solid rgba(167, 161, 161, 0.592);
@@ -166,11 +172,11 @@ nav .store:hover{
 }
 .drop-item li{
     list-style-type: none;
-    /* height: 5rem; */
     padding: .5rem;
     margin: .2rem 0;
     position: relative;
     transform:  scale(0.9);
+    border-radius: .5rem;
 }
 .drop-item li:first-child{
     margin-top: 0;
@@ -180,18 +186,27 @@ nav .store:hover{
 }
 
 .drop-item li:hover{
-    background-color: #fafafa;
+    background-color: #efeaea;
     transform:  scale(1);
-
 }
 
 .drop-item li a{
-    text-decoration: none;
     color: var(--text-secondry);
+    text-decoration: none;
     display: flex;
     font-size: .5rem;
+    padding: 0;
+    margin: 0;
+    height: 100%;
 
 }
+
+.drop-item li a span{
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-wrap: nowrap;
+}
+
 .drop-item li .bx{
     font-size: 1.5rem;
     margin-right: .6rem;
